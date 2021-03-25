@@ -20,7 +20,7 @@ const projects = [{
   image: "code-image.png",
   description: "Create short video intros based on images and attach them to videos."
 }, {
-  name: "Post it",
+  name: "Reddit Clone",
   tech: ["ruby", "rails"],
   github: "https://github.com/jleewebdev/postit-jl",
   type: "app",
@@ -38,7 +38,7 @@ const projects = [{
   tech: ["javascript",],
   github: "simon.png",
   type: "app",
-  image: "code-image.png",
+  image: "simon.png",
   description: "Simon clone"
 }, {
   name: "Calculator",

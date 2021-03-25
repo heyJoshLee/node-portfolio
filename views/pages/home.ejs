@@ -1,21 +1,35 @@
 <%- include('../_header.ejs') %>
 <h1>hello world</h1>
-<ul class="project-list">
-  <% for (i = 0; i < projects.length; i++) { %>
-    <% let project = projects[i]; %>
-    <li class="project-preview">
-      <img src="images/<%=project.image%>" /> 
-      <p><%= project.name %></p>
-      <ul class="tech-list">
-        <% for (let i = 0; i < project.tech.length; i++) { %>
-          <li class="badge"><%=project.tech[i]%></li>
-        <% } %>
-        <p><%= project.description%> </p>
-      </ul>
-    </li>
 
-  <%} %>
 
-<ul>
+<section class="skills">
+  <h3>Here's What I Know...</h3>
+  <% for (let i = 0; i < technologies.length; i++) { %>
+    <span class="skill"><%=technologies[i]%></span>
+  <% } %>
+</section>
+
+<section class="projects">
+  <ul class="project-list">
+    <h3>Here's What I've Made</h3>
+    <% for (i = 0; i < projects.length; i++) { %>
+      <% let project = projects[i]; %>
+      <li class="project-preview">
+
+        <a href="<%=project.github%>">
+          <img src="images/<%=project.image%>"/> 
+        </a>
+
+        <p><%= project.name %></p>
+        <ul class="tech-list">
+          <% for (let i = 0; i < project.tech.length; i++) { %>
+            <li class="badge"><%=project.tech[i]%></li>
+          <% } %>
+        </ul>
+      </li>
+
+    <%} %>
+  <ul>
+</section>
 
 <%- include('../_footer.ejs') %>

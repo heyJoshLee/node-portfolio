@@ -7,6 +7,7 @@ li.project-preview img {
   height: 200px;
   display: block;
   margin: 0 auto;
+  border-radius: 100%;
 }
 
 ul.project-list,
@@ -20,11 +21,37 @@ ul.project-list,
   display: inline-block;
   vertical-align: top;
   width: 250px;
-  border: 1px solid black;
   margin-bottom: 20px;
   padding: 10px 5px;
 }
 
-.tech-list li {
-
+.badge {
+  background: lightgrey;
+  border-radius: 10px;
+  padding: 4px 10px;
+  color: black;
 }
+
+.skills {
+  text-transform: uppercase;
+  background-color: black;
+  color: snow;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.skill {
+  padding: 0 5px;
+}
+
+.skill + .skill {
+  border-left: 1px solid snow;
+}
+
+
+.projects {
+  padding-top: 20px;
+  background-image: linear-gradient(to top, #200537, #293068, #275b98, #1788c4, #12b8eb);
+  color: snow;
+}
+
