@@ -1,0 +1,21 @@
+<%- include('../_header.ejs') %>
+<h1>hello world</h1>
+<ul class="project-list">
+  <% for (i = 0; i < projects.length; i++) { %>
+    <% let project = projects[i]; %>
+    <li class="project-preview">
+      <img src="images/<%=project.image%>" /> 
+      <p><%= project.name %></p>
+      <ul class="tech-list">
+        <% for (let i = 0; i < project.tech.length; i++) { %>
+          <li class="badge"><%=project.tech[i]%></li>
+        <% } %>
+        <p><%= project.description%> </p>
+      </ul>
+    </li>
+
+  <%} %>
+
+<ul>
+
+<%- include('../_footer.ejs') %>
